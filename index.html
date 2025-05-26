@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire Client</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<FORM name="F">
+
+<FIELDSET STYLE="background: #FFFFDD ;">
+<LEGEND id="titre" STYLE="background: #FFFF88 ;"><B>Client</B></LEGEND>
+
+<CENTER><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="5" WIDTH="100%">
+
+<TR>
+  <TD WIDTH="17%"><B>Civilité</B>
+  <TD WIDTH="45%">
+    <INPUT TYPE=RADIO NAME=civilite VALUE="Mademoiselle">Mademoiselle
+    <INPUT TYPE=RADIO NAME=civilite VALUE="Madame" CHECKED>Madame
+    <INPUT TYPE=RADIO NAME=civilite VALUE="Monsieur">Monsieur
+  <TD id="T1" WIDTH="38%">
+    <INPUT TYPE="text" NAME="display" SIZE=15 VALUE="">
+  </TD>
+<TR>
+  <TD><B>Nom / Prénom</B>
+  <TD><INPUT id="C1" TYPE=TEXT NAME=nom SIZE=50 MAXLENGTH=80>
+  <TD id="T2"></TD>
+<TR>
+  <TD><B>Adresse</B>
+  <TD><TEXTAREA id="C2" NAME=adresse COLS=50 ROWS=2 WRAP=PHYSICAL></TEXTAREA>
+  <TD id="T3"></TD>
+<TR>
+  <TD><B>No postal / Localité</B>
+  <TD>
+    <INPUT id="C3" TYPE=TEXT NAME=no_postal SIZE=5 MAXLENGTH=4>
+    <INPUT id="C4" TYPE=TEXT NAME=localite SIZE=20 MAXLENGTH=80 VALUE="">
+  <TD id="T4"></TD>
+<TR>
+  <TD><B>Pays</B>
+  <TD>
+    <SELECT id="lepays" NAME=pays>
+      <OPTION>Tunisie</OPTION>
+      <OPTION>Algérie</OPTION>
+      <OPTION SELECTED>Maroc</OPTION>
+    </SELECT>
+    <B> Ajouter pays</B>
+    <INPUT id="C5" TYPE=TEXT NAME=monpays SIZE=20 MAXLENGTH=80 VALUE="Libye">
+    <button type="button" onClick="ajouterPays()">Ajouter pays</button>
+  <TD></TD>
+<TR>
+  <TD><B>Plateforme(s)</B>
+  <TD>
+    <INPUT TYPE=CHECKBOX NAME=materiel VALUE="Windows" CHECKED>Windows     
+    <INPUT TYPE=CHECKBOX NAME=materiel VALUE="Mac" CHECKED>Macintosh     
+    <INPUT TYPE=CHECKBOX NAME=materiel VALUE="Unix">Unix     
+  <TD></TD>
+<TR>
+  <TD><B>Applications(s)</B>
+  <TD>
+    <SELECT NAME=applications SIZE=5 MULTIPLE>
+      <OPTION SELECTED>Bureautique</OPTION>
+      <OPTION>DAO</OPTION>
+      <OPTION>Statistiques</OPTION>
+      <OPTION>SGBD</OPTION>
+      <OPTION SELECTED>Internet</OPTION>
+    </SELECT>
+  <TD></TD>
+</TABLE></CENTER>
+</FIELDSET>
+
+<CENTER>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="10" WIDTH="95%">
+<TR><TH>
+  <INPUT TYPE=button VALUE="Soumettre formulaire" onclick="afficherAlert()">  
+  <INPUT TYPE=button VALUE="Vérification formulaire" onclick="verifierFormulaire()">
+  <INPUT TYPE=button VALUE="Enregistrer" onclick="enregistrer()">
+  <INPUT TYPE=button VALUE="Récupérer" onclick="recuperer()">
+  <INPUT TYPE=RESET VALUE="Effacer">
+</TABLE>
+</CENTER>
+
+</FORM>
+
+</body>
+</html>
